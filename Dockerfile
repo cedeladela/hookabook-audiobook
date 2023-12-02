@@ -6,6 +6,6 @@ RUN mvn --show-version --update-snapshots --batch-mode clean package
 FROM eclipse-temurin:17-jre
 RUN mkdir /app
 WORKDIR /app
-COPY --from=build ./app/api/target/api-*.jar /app/api.jar
+COPY --from=build ./app/api/target/api-1.0-SNAPSHOT.jar /app
 EXPOSE 8080
-CMD ["java", "-jar", "api.jar"]
+CMD ["java", "-jar", "api-1.0-SNAPSHOT.jar"]
