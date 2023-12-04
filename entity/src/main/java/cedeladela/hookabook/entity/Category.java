@@ -22,7 +22,4 @@ public class Category {
 
     @Column(name = "name")
     private String name;
-
-//    @ManyToMany(mappedBy = "categories")
-//    private Set<Audiobook> audiobooks = new HashSet<>();
 }
