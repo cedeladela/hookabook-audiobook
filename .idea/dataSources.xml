@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5433/hookabook</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="yaddinee@flora.db.elephantsql.com" uuid="7b3ceebb-de43-4387-ab5f-652ee3bc8942">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://flora.db.elephantsql.com/yaddinee</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="maven.yml change">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dockerize.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="pom.xml build fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +207,7 @@
       <workItem from="1699628725204" duration="70000" />
       <workItem from="1700665237617" duration="29000" />
       <workItem from="1701529025712" duration="259000" />
-      <workItem from="1701532058043" duration="2682000" />
+      <workItem from="1701532058043" duration="7507000" />
     </task>
     <task id="LOCAL-00001" summary="maven.yml change">
       <option name="closed" value="true" />
@@ -219,7 +217,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701532580076</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="maven.yml change">
+      <option name="closed" value="true" />
+      <created>1701534945524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701534945524</updated>
+    </task>
+    <task id="LOCAL-00003" summary="maven.yml change">
+      <option name="closed" value="true" />
+      <created>1701535609139</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701535609139</updated>
+    </task>
+    <task id="LOCAL-00004" summary="pom.xml build fix">
+      <option name="closed" value="true" />
+      <created>1701535970503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701535970503</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +260,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="maven.yml change" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven.yml change" />
+    <MESSAGE value="pom.xml build fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom.xml build fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
