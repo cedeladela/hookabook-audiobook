@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/dockerize.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dockerize.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +205,7 @@
       <workItem from="1701529025712" duration="259000" />
       <workItem from="1701532058043" duration="7507000" />
       <workItem from="1701693329354" duration="17961000" />
-      <workItem from="1701779886434" duration="7209000" />
+      <workItem from="1701779886434" duration="7533000" />
     </task>
     <task id="LOCAL-00001" summary="maven.yml change">
       <option name="closed" value="true" />
@@ -275,7 +271,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701812519807</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ci/cd">
+      <option name="closed" value="true" />
+      <created>1701813837112</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701813837112</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1701814141563</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814141563</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +309,7 @@
     <MESSAGE value="pom.xml build fix" />
     <MESSAGE value="entities change - split into two microservices" />
     <MESSAGE value="file uploads" />
+    <MESSAGE value="ci/cd" />
     <MESSAGE value="refactor" />
     <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
