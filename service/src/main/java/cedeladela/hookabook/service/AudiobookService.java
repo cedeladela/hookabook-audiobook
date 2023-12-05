@@ -46,20 +46,6 @@ public class AudiobookService {
         return audiobookRepository.save(audiobook);
     }
 
-//    public Audiobook save(Audiobook audiobook, MultipartFile audiobookFile, MultipartFile coverImageFile) throws MinioException, IOException, NoSuchAlgorithmException, InvalidKeyException {
-//
-////        //generate random filename for audiobook file
-////        String generatedFilename = java.util.UUID.randomUUID().toString();
-////
-////        minioService.uploadAudioBookZip(audiobookFile, generatedFilename);
-////        minioService.uploadCoverImage(coverImageFile, generatedFilename);
-////
-////        audiobook.setFileUrl(minioService.getAudioBookZipUrl(generatedFilename));
-////        audiobook.setCoverImageUrl(minioService.getCoverImageUrl(generatedFilename));
-//
-//        return audiobookRepository.save(audiobook);
-//    }
-
     public Audiobook update(Audiobook audiobook) {
         Optional<Audiobook> existingAudiobookOptional = audiobookRepository.findById(audiobook.getId());
         if (existingAudiobookOptional.isPresent()) {
