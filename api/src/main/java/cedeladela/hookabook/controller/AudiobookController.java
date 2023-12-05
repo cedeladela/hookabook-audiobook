@@ -8,8 +8,10 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.tags.Tags;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -48,13 +50,37 @@ public class AudiobookController {
         }
     }
 
-    @PostMapping
+    @PostMapping()
     @Operation(summary = "Create Audiobook", description = "Creates a new audiobook.")
-    public ResponseEntity<Object> create(@RequestBody Audiobook audiobook) {
+    public ResponseEntity<Object> create(@RequestPart Audiobook audiobook) {
         try {
             Audiobook createdAudiobook = audiobookService.save(audiobook);
             return ResponseEntity.status(HttpStatus.CREATED).body(createdAudiobook);
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("An error occurred: " + e.getMessage());
+        }
+    }
+
+    @PostMapping( path = "/upload-audiobook/{audiobookId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @Operation(summary = "Upload Audiobook", description = "Uploads an audiobook file.")
+    public ResponseEntity<Object> uploadAudiobook(@PathVariable Long audiobookId, @RequestPart("audiobookFile") MultipartFile audiobookFile) {
+        try {
+            Audiobook audiobook = audiobookService.uploadAudiobook(audiobookId, audiobookFile);
+            return ResponseEntity.status(HttpStatus.OK).body(audiobook);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("An error occurred: " + e.getMessage());
+        }
+    }
+
+    @PostMapping( path = "/upload-coverimage/{audiobookId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @Operation(summary = "Upload cover image", description = "Uploads audiobook cover image.")
+    public ResponseEntity<Object> uploadCoverImage(@PathVariable Long audiobookId, @RequestPart("coverImage") MultipartFile coverImage) {
+        try {
+            Audiobook audiobook = audiobookService.uploadCoverImage(audiobookId, coverImage);
+            return ResponseEntity.status(HttpStatus.OK).body(audiobook);
+        } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An error occurred: " + e.getMessage());
         }

@@ -1,6 +1,7 @@
 package cedeladela.hookabook.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.metamodel.IdentifiableType;
 import lombok.*;
 
 @Entity
@@ -19,7 +20,7 @@ public class Rating {
 
     @ManyToOne // Many ratings belong to one user
     @JoinColumn(name = "user_id")
-    private HbUser user;
+    private HbUser hbUser;
 
     @ManyToOne // Many ratings belong to one audiobook
     @JoinColumn(name = "audiobook_id")
@@ -27,4 +28,6 @@ public class Rating {
 
     @Column(name = "rating_value")
     private Integer ratingValue;
+
+
 }

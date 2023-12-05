@@ -23,23 +23,11 @@ public class RatingController {
         this.ratingService = ratingService;
     }
 
-    @GetMapping("/{id}")
-    @Operation(summary = "Find Rating by ID", description = "Returns a Rating as per the ID.")
-    public ResponseEntity<Object> findById(@PathVariable Long id) {
+    @GetMapping("/{hbUserId}/{audiobookId}")
+    @Operation(summary = "Find rating by user and audiobook.", description = "Returns a rating as per the user and audiobook.")
+    public ResponseEntity<Object> findByUserAndAudiobook(@PathVariable Long hbUserId, @PathVariable Long audiobookId) {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(ratingService.getById(id));
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An error occurred: " + e.getMessage());
-        }
-    }
-
-    @GetMapping("/get-all")
-    @Operation(summary = "Get All Ratings", description = "Returns a list of all Ratings.")
-    public ResponseEntity<Object> getAll() {
-        try {
-            List<Rating> ratings = ratingService.getAll();
-            return ResponseEntity.status(HttpStatus.OK).body(ratings);
+            return ResponseEntity.status(HttpStatus.OK).body(ratingService.findByUserIdAndAudiobookId(hbUserId, audiobookId));
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An error occurred: " + e.getMessage());
@@ -47,22 +35,21 @@ public class RatingController {
     }
 
     @PostMapping
-    @Operation(summary = "Create Rating", description = "Creates a new Rating.")
-    public ResponseEntity<Object> create(@RequestBody Rating rating) {
+    @Operation(summary = "Add rating by user and audiobook.", description = "Adds a new user rating for audiobook. The rating must be between 1 and 5.")
+    public ResponseEntity<Object> addRating(@RequestBody Rating rating) {
         try {
-            Rating createdRating = ratingService.create(rating);
+            Rating createdRating = ratingService.addRating(rating);
             return ResponseEntity.status(HttpStatus.CREATED).body(createdRating);
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An error occurred: " + e.getMessage());
         }
     }
-
-    @PutMapping("/{id}")
-    @Operation(summary = "Update Rating", description = "Updates an existing Rating.")
-    public ResponseEntity<Object> update(@RequestBody Rating rating) {
+    @PutMapping
+    @Operation(summary = "Update rating by user and audiobook.", description = "Updates an existing Rating.")
+    public ResponseEntity<Object> updateRating(@RequestBody Rating rating) {
         try {
-            Rating updatedRating = ratingService.update(rating);
+            Rating updatedRating = ratingService.updateRating(rating);
             return ResponseEntity.status(HttpStatus.OK).body(updatedRating);
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -70,12 +57,12 @@ public class RatingController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    @Operation(summary = "Delete Rating", description = "Deletes a Rating by ID.")
-    public ResponseEntity<Object> delete(@PathVariable Long id) {
+    @DeleteMapping("/{hbUserId}/{audiobookId}")
+    @Operation(summary = "Delete rating by user and audiobook.", description = "Deletes a Rating by user and audiobook.")
+    public ResponseEntity<Object> delete(@PathVariable Long hbUserId, @PathVariable Long audiobookId) {
         try {
-            ratingService.delete(id);
-            return ResponseEntity.status(HttpStatus.OK).body("Rating with ID " + id + " deleted successfully.");
+            ratingService.deleteRating(hbUserId, audiobookId);
+            return ResponseEntity.status(HttpStatus.OK).body("Rating of user " + hbUserId + " for audiobook " + audiobookId + " deleted successfully.");
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("An error occurred: " + e.getMessage());

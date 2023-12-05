@@ -31,10 +31,10 @@ public class Audiobook {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "file_url")
+    @Column(name = "file_url", length = 5000)
     private String fileUrl;
 
-    @Column(name = "cover_image_url")
+    @Column(name = "cover_image_url", length = 5000)
     private String coverImageUrl;
 
     @Column(name = "release_date") // Correct the column name
