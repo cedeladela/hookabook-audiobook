@@ -123,7 +123,6 @@ public class AudiobookService {
         minioService.uploadCoverImage(coverImageFile, generatedFilename);
 
         Audiobook audiobook = getById(audiobookId);
-        audiobook.setFileUrl(minioService.getAudioBookZipUrl(generatedFilename));
         audiobook.setCoverImageUrl(minioService.getCoverImageUrl(generatedFilename));
         return audiobookRepository.save(audiobook);
     }

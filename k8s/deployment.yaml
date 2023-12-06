@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hookabook-audiobook
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hookabook-audiobook
+  template:
+    metadata:
+      labels:
+        app: hookabook-audiobook
+    spec:
+      containers:
+        - image: cedeladela/hookabook:audiobook-microservice_2023-12-05-23-12-29
+          name: hookabook-audiobook
+          env:
+            - name: DATASOURCE_CONNECTION_URL
+              value: jdbc:postgresql://cedeladela.crabdance.com:64432/hookabook
+            - name: DATASOURCE_USERNAME
+              value: hookabook
+            - name: DATASOURCE_PASSWORD
+              valueFrom: #use Kubernetes secret for storing the password
+                secretKeyRef:
+                  name: datasource-password
+                  key: password
+          ports:
+            - containerPort: 8081
+              name: server
+#          livenessProbe:
+#            httpGet:
+#              path: /health/live
+#              port: server
+#            initialDelaySeconds: 20
+#            periodSeconds: 3
+#          readinessProbe:
+#            httpGet:
+#              path: /health/ready
+#              port: server
+#            initialDelaySeconds: 20
+#            periodSeconds: 3
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hookabook-audiobook
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8081
+      protocol: TCP
+      targetPort: server
+  selector:
+    app: hookabook-audiobook
