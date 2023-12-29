@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/DataLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/AudiobookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/AudiobookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/RatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/RatingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity/src/main/java/cedeladela/hookabook/entity/Audiobook.java" beforeDir="false" afterPath="$PROJECT_DIR$/entity/src/main/java/cedeladela/hookabook/entity/Audiobook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deployment-template.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +212,7 @@
       <workItem from="1701779886434" duration="14710000" />
       <workItem from="1702337934005" duration="27000" />
       <workItem from="1703846296159" duration="8432000" />
+      <workItem from="1703888420968" duration="2050000" />
     </task>
     <task id="LOCAL-00001" summary="maven.yml change">
       <option name="closed" value="true" />
@@ -348,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701823164477</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="db">
+      <option name="closed" value="true" />
+      <created>1703888565282</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703888565282</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,11 +384,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/AudiobookController.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service/src/main/java/cedeladela/hookabook/service/AudiobookService.java</url>
           <line>114</line>
           <option name="timeStamp" value="13" />
@@ -395,6 +392,11 @@
           <url>file://$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/AudiobookController.java</url>
           <line>58</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/AudiobookController.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -63,7 +63,7 @@ public class AudiobookController {
         }
     }
 
-    @PostMapping( path = "/upload-audiobook/{audiobookId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping( path = "/upload-audiobook/{audiobookId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Upload Audiobook", description = "Uploads an audiobook file.")
     public ResponseEntity<Object> uploadAudiobook(@PathVariable Long audiobookId, @RequestPart("audiobookFile") MultipartFile audiobookFile) {
         try {
@@ -75,7 +75,7 @@ public class AudiobookController {
         }
     }
 
-    @PostMapping( path = "/upload-coverimage/{audiobookId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping( path = "/upload-coverimage/{audiobookId}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Upload cover image", description = "Uploads audiobook cover image.")
     public ResponseEntity<Object> uploadCoverImage(@PathVariable Long audiobookId, @RequestPart("coverImage") MultipartFile coverImage) {
         try {
