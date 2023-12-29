@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/rating")
 @Tag(name = "Rating")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class RatingController {
 
     private final RatingService ratingService;

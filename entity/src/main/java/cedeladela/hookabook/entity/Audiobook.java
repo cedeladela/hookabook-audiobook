@@ -28,7 +28,7 @@ public class Audiobook {
     @Column(name = "author")
     private String author;
 
-    @Column(name = "description")
+    @Column(name = "description", length = 5000)
     private String description;
 
     @Column(name = "file_url", length = 5000)

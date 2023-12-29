@@ -18,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/audiobook")
 @Tag(name = "Audiobook")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AudiobookController {
 
     private final AudiobookService audiobookService;
@@ -52,7 +53,7 @@ public class AudiobookController {
 
     @PostMapping()
     @Operation(summary = "Create Audiobook", description = "Creates a new audiobook.")
-    public ResponseEntity<Object> create(@RequestPart Audiobook audiobook) {
+    public ResponseEntity<Object> create(@RequestBody Audiobook audiobook) {
         try {
             Audiobook createdAudiobook = audiobookService.save(audiobook);
             return ResponseEntity.status(HttpStatus.CREATED).body(createdAudiobook);

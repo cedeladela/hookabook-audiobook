@@ -15,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/category")
 @Tag(name = "Category")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CategoryController {
 
     private final CategoryService categoryService;
