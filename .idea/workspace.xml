@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="db">
+    <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="neki neki">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/AudiobookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/AudiobookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +211,7 @@
       <workItem from="1701779886434" duration="14710000" />
       <workItem from="1702337934005" duration="27000" />
       <workItem from="1703846296159" duration="8432000" />
-      <workItem from="1703888420968" duration="2050000" />
+      <workItem from="1703888420968" duration="3915000" />
     </task>
     <task id="LOCAL-00001" summary="maven.yml change">
       <option name="closed" value="true" />
@@ -350,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703888565282</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="neki neki">
+      <option name="closed" value="true" />
+      <created>1703894107749</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703894107749</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +385,8 @@
     <MESSAGE value="fix image upload" />
     <MESSAGE value="depl" />
     <MESSAGE value="db" />
-    <option name="LAST_COMMIT_MESSAGE" value="db" />
+    <MESSAGE value="neki neki" />
+    <option name="LAST_COMMIT_MESSAGE" value="neki neki" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

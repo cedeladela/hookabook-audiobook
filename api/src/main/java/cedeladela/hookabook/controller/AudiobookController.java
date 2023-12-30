@@ -87,7 +87,7 @@ public class AudiobookController {
         }
     }
 
-    @PutMapping("/{id}")
+    @PutMapping()
     @Operation(summary = "Update Audiobook", description = "Updates an existing audiobook.")
     public ResponseEntity<Object> update(@RequestBody Audiobook audiobook) {
         try {
