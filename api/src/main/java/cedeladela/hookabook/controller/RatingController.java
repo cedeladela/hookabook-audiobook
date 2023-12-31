@@ -1,6 +1,7 @@
 package cedeladela.hookabook.controller;
 
 import cedeladela.hookabook.entity.Rating;
+import cedeladela.hookabook.metrics.RatingCounterMetrics;
 import cedeladela.hookabook.service.RatingService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -18,10 +19,12 @@ import java.util.List;
 public class RatingController {
 
     private final RatingService ratingService;
+    private final RatingCounterMetrics ratingCounterMetrics;
 
     @Autowired
-    public RatingController(RatingService ratingService) {
+    public RatingController(RatingService ratingService, RatingCounterMetrics ratingCounterMetrics) {
         this.ratingService = ratingService;
+        this.ratingCounterMetrics = ratingCounterMetrics;
     }
 
     @GetMapping("/{hbUserId}/{audiobookId}")
@@ -39,6 +42,9 @@ public class RatingController {
     @Operation(summary = "Add rating by user and audiobook.", description = "Adds a new user rating for audiobook. The rating must be between 1 and 5.")
     public ResponseEntity<Object> addRating(@RequestBody Rating rating) {
         try {
+            // Increment the request count metric
+            ratingCounterMetrics.incrementRequestCount();
+
             Rating createdRating = ratingService.addRating(rating);
             return ResponseEntity.status(HttpStatus.CREATED).body(createdRating);
         } catch (RuntimeException e) {
