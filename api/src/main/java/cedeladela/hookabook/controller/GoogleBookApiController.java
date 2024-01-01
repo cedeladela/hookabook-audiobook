@@ -2,10 +2,7 @@ package cedeladela.hookabook.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -15,6 +12,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/api/googlebooks")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class GoogleBookApiController {
 
     private final String GOOGLE_BOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes?q=inauthor:{author}&key=AIzaSyCOSV_i2mWOHGogOgB8fAn0pjP9b1c7mi4";
@@ -45,7 +43,7 @@ public class GoogleBookApiController {
             e.printStackTrace();
         }
 
-        // Convert set to list if needed
-        return new ArrayList<>(uniqueTitles);
+        // Convert set to list if needed,
+        return new ArrayList<>(uniqueTitles).subList(0, Math.min(uniqueTitles.size(), 10));
     }
 }
