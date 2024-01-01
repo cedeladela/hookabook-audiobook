@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- UDP appender za Logit.io -->
+        <Socket name="logit" host="listener.logit.io" port="10200" protocol="UDP">
+            <SerializedLayout />
+        </Socket>
+    </Appenders>
+    <Loggers>
+        <!-- Konfiguracija za vaše pakete -->
+        <Root level="info">
+            <AppenderRef ref="logit"/>
+        </Root>
+        <!-- Druge nastavitve loggerjev ... -->
+    </Loggers>
+</Configuration>
