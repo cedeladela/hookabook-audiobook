@@ -13,7 +13,7 @@ spec:
         app: hookabook-audiobook
     spec:
       containers:
-        - image: cedeladela/hookabook:audiobook-microservice_2024-01-02-17-18-35
+        - image: cedeladela/hookabook:audiobook-microservice_2024-01-02-17-24-02
           name: hookabook-audiobook
           env:
             - name: DATASOURCE_CONNECTION_URL
@@ -38,13 +38,13 @@ spec:
               name: server
           livenessProbe:
             httpGet:
-              path: /health
+              path: /actuator/health
               port: server
             initialDelaySeconds: 20
             periodSeconds: 3
           readinessProbe:
             httpGet:
-              path: /health
+              path: /actuator/health
               port: server
             initialDelaySeconds: 20
             periodSeconds: 3
