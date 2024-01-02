@@ -10,7 +10,7 @@ public class RatingCounterMetrics {
     private final Counter requestsCounter;
 
     public RatingCounterMetrics(MeterRegistry meterRegistry) {
-        this.requestsCounter = Counter.builder("requests.total")
+        this.requestsCounter = Counter.builder("audiobookRatings.total")
                 .description("Total number of requests")
                 .register(meterRegistry);
     }

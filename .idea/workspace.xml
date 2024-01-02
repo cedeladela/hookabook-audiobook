@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/metrics/RatingCounterMetrics.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/metrics/RatingCounterMetrics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +215,7 @@
       <workItem from="1703846296159" duration="8432000" />
       <workItem from="1703888420968" duration="21674000" />
       <workItem from="1704129519889" duration="24000" />
-      <workItem from="1704129553559" duration="12558000" />
+      <workItem from="1704129553559" duration="14024000" />
     </task>
     <task id="LOCAL-00001" summary="maven.yml change">
       <option name="closed" value="true" />
@@ -415,7 +417,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704212626062</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="config">
+      <option name="closed" value="true" />
+      <created>1704212816713</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1704212816713</updated>
+    </task>
+    <task id="LOCAL-00027" summary="config">
+      <option name="closed" value="true" />
+      <created>1704213097050</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1704213097050</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
