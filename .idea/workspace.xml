@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7860f4f-e98a-4267-8a2d-17aee5712787" name="Changes" comment="config">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/controller/GraphqlController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/resources/graphql/schema.graphqls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/cedeladela/hookabook/DataLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
