@@ -13,7 +13,7 @@ spec:
         app: hookabook-audiobook
     spec:
       containers:
-        - image: cedeladela/hookabook:audiobook-microservice_2024-01-02-16-37-09
+        - image: cedeladela/hookabook:audiobook-microservice_2024-01-02-17-18-35
           name: hookabook-audiobook
           env:
             - name: DATASOURCE_CONNECTION_URL
