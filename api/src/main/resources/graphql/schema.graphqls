@@ -1,0 +1,22 @@
+type Audiobook {
+    id: ID!
+    title: String!
+    author: String!
+    description: String!
+    fileUrl: String!
+    coverImageUrl: String!
+    releaseDate: String!
+    averageRating: Float!
+    totalRatingsCount: Int!
+    totalCommentsCount: Int!
+    categories: [Category!]!
+}
+
+type Category {
+    id: ID!
+    name: String!
+}
+
+type Query {
+    getTopRatedAudiobooks(limit: Int!): [Audiobook!]!
+}
