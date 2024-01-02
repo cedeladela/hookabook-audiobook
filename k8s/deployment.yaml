@@ -13,7 +13,7 @@ spec:
         app: hookabook-audiobook
     spec:
       containers:
-        - image: cedeladela/hookabook:audiobook-microservice_2023-12-06-01-32-49
+        - image: cedeladela/hookabook:audiobook-microservice_2024-01-02-16-37-09
           name: hookabook-audiobook
           env:
             - name: DATASOURCE_CONNECTION_URL
@@ -25,6 +25,14 @@ spec:
                 secretKeyRef:
                   name: datasource-password
                   key: password
+            - name: MINIO_ENDPOINT
+              value: http://cedeladela.crabdance.com:64000
+            - name: MINIO_ACCESS_KEY
+              value: PP8VR990kZYk4YPNuinq
+            - name: MINIO_SECRET_KEY
+              value: x2zMzEG9KqivXd1rTPxmuxh3vZ6I3vW0iI49pyKP
+            - name: MINIO_BUCKET_NAME
+              value: hookabook
           ports:
             - containerPort: 8081
               name: server
